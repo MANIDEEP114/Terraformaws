@@ -4,6 +4,24 @@ provider "aws" {
     region = "${var.aws_region}"
 }
 
+resource "aws_iam_policy" "iam_policy_for_ec2" {
+ name         = "aws_iam_policy_for_terraform_aws_ec2"
+ path         = "/"
+ description  = "AWS IAM Policy for managing aws ec2"
+ policy = <<EOF
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "*",
+            "Resource": "*"
+        }
+    ]
+}
+EOF
+}
+
 resource "aws_vpc" "default" {
     cidr_block = "${var.vpc_cidr}"
     enable_dns_hostnames = true
