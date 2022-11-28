@@ -4,10 +4,10 @@ variable "aws_region" {}
 variable "amis" {
     description = "AMIs by region"
     default = {
-    us-east-1 = "ami-97785bed" # ubuntu 14.04 LTS
-		us-east-2 = "ami-f63b1193" # ubuntu 14.04 LTS
-		us-west-1 = "ami-824c4ee2" # ubuntu 14.04 LTS
-		us-west-2 = "ami-f2d3638a" # ubuntu 14.04 LTS
+    us-east-1 = "ami-08c40ec9ead489470" # ubuntu 14.04 LTS
+                us-east-2 = "ami-0beaa649c482330f7" # ubuntu 14.04 LTS
+		us-west-1 = "ami-0f5e8a042c8bfcd5e" # ubuntu 14.04 LTS
+		us-west-2 = "ami-094125af156557ca2" # ubuntu 14.04 LTS
     }
 }
 variable "vpc_cidr" {}
